@@ -6,7 +6,7 @@
 
 // @lc code=start
 function isPalindrome(x: number): boolean {
-    if(x < 0 || x % 10 === 0 && x !== 0) return false;
+    if (x < 0 || x % 10 === 0 && x !== 0) return false;
 
     let reversed = 0;
     let original = x;

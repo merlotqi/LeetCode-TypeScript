@@ -6,7 +6,7 @@
 
 // @lc code=start
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
-    const merged : number[] = [];
+    const merged: number[] = [];
     let i = 0, j = 0;
 
     while (i < nums1.length && j < nums2.length) {
@@ -26,7 +26,7 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
 
     while (j < nums2.length) {
         merged.push(nums2[j]);
-        j++; 
+        j++;
     }
 
     return merged.length % 2 === 0 ? (merged[merged.length / 2] + merged[merged.length / 2 - 1]) / 2 : merged[Math.floor(merged.length / 2)];

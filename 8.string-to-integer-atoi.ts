@@ -18,15 +18,15 @@ function myAtoi(s: string): number {
         index++;
     }
 
-    if(index < n && (s[index] === '+' || s[index] === '-')) {
+    if (index < n && (s[index] === '+' || s[index] === '-')) {
         sign = s[index] === '-' ? -1 : 1;
         index++;
     }
 
-    if(index < n && isDigit(s[index])) {
+    if (index < n && isDigit(s[index])) {
         const digit = parseInt(s[index]);
 
-        if(result > Math.floor(INT_MAX - digit) / 10) {
+        if (result > Math.floor(INT_MAX - digit) / 10) {
             return sign === 1 ? INT_MAX : INT_MIN;
         }
 
@@ -38,7 +38,7 @@ function myAtoi(s: string): number {
 };
 
 
-function isDigit(char : string) : boolean {
+function isDigit(char: string): boolean {
     return char >= '0' && char <= '9';
 }
 
